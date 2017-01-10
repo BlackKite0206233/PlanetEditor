@@ -1,0 +1,6 @@
+D:\Users\Yeh\Documents\C#\PlanetEditor\PlanetEditor\bin\Debug\PlanetEditor.exe.config
+D:\Users\Yeh\Documents\C#\PlanetEditor\PlanetEditor\bin\Debug\PlanetEditor.exe
+D:\Users\Yeh\Documents\C#\PlanetEditor\PlanetEditor\bin\Debug\PlanetEditor.pdb
+D:\Users\Yeh\Documents\C#\PlanetEditor\PlanetEditor\obj\Debug\PlanetEditor.csprojResolveAssemblyReference.cache
+D:\Users\Yeh\Documents\C#\PlanetEditor\PlanetEditor\obj\Debug\PlanetEditor.exe
+D:\Users\Yeh\Documents\C#\PlanetEditor\PlanetEditor\obj\Debug\PlanetEditor.pdb
