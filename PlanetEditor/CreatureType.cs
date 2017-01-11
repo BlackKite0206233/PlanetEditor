@@ -9,10 +9,10 @@ namespace PlanetEditor
     abstract class CreatureType
     {
         public CreatureType() { }
-        public virtual void move() {  }
-        public virtual void absorb() {  }
-        public virtual bool alive() { return true; }
-        public virtual int deadOrAlive() { return 0; }
-        public virtual int birth() { return 0; }
+        public abstract void move();
+        public abstract void absorb();
+        public abstract bool alive();
+        public abstract int deadOrAlive();
+        public abstract int birth();
     }
 }

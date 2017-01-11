@@ -18,7 +18,7 @@ namespace PlanetEditor
             _p_implement = new T();
         }
 
-        public void update()
+        public override void update()
         {
             _p_implement.move();
             _p_implement.absorb();

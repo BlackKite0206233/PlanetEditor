@@ -21,7 +21,7 @@ namespace PlanetEditor
 
         public uint getID() { return _ID; }
         public string getName() { return _name; }
-        public virtual void update() { }
+        public abstract void update();
 
         private static uint s_next_id = 0;
         private UInt32 _ID;

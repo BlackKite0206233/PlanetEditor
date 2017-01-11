@@ -49,7 +49,7 @@ namespace PlanetEditor
                 }
                     
         }
-        public virtual void update()
+        public override void update()
         {
             if(_object_ptrs != null)
                 foreach (Object it in _object_ptrs)
