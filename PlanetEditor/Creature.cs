@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace PlanetEditor
 {
-    class Creature : Object
+    class Creature<T> : Object where T : CreatureType, new()
     {
-        public Creature(Creature src, string type) : base(src.getName())
+        public Creature(Creature<T> src) : base(src.getName())
         {
             _amount = src._amount;
-            init_p_implement(type);
+            _p_implement = new T();
         }
-        public Creature(string name, string type) : base(name)
+        public Creature(string name) : base(name)
         {
-            init_p_implement(type);
+            _p_implement = new T();
         }
 
         public void update()
@@ -29,16 +29,7 @@ namespace PlanetEditor
         }
 
         private int _amount = 0;
-        private CreatureType _p_implement = null;
-        private void init_p_implement(string type)
-        {
-            if (type.Equals("Lion"))
-                _p_implement = new Lion();
-            else if (type.Equals("Plant"))
-                _p_implement = new Plant();
-            else
-                throw new Exception("You shall not pass!!");
-        }
+        private T _p_implement = null;
 
         ~Creature()
         {

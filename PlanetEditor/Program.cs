@@ -44,22 +44,19 @@ namespace PlanetEditor
                     string c_type = arg[1];
                     string name = arg[2];
                     Object creature = null;
-                    if(p_planet == null)
+                    if (p_planet == null)
                         Console.WriteLine("Please create planet first.");
+                    else if (c_type.Equals("Lion"))
+                        creature = new Creature<Lion>(name);
+                    else if(c_type.Equals("Plant"))
+                        creature = new Creature<Plant>(name);
                     else
+                        Console.WriteLine("you shall not pass!!");
+                    if(creature != null)
                     {
-                        try
-                        {
-                            creature = new Creature(name, c_type);
-                            p_planet.addObject(creature);
-                            Console.WriteLine(creature.getName() + " added!");
-                        }
-                        catch (Exception e)
-                        {
-                            Console.WriteLine(e.Data);
-                        }
+                        p_planet.addObject(creature);
+                        Console.WriteLine(creature.getName() + " added!");
                     }
-
                 }
                 else if(op.Equals("ro", StringComparison.Ordinal))
                 {
@@ -79,6 +76,10 @@ namespace PlanetEditor
                         Console.WriteLine("Please create planet first.");
                     else
                         p_planet.update();
+                }
+                else
+                {
+                    Console.WriteLine("Doesn't have this command");
                 }
                 input = Console.ReadLine();
             }
