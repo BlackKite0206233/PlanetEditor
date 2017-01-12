@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PlanetEditorV2
+namespace PlanetEditor
 {
     class Creature<T> : Object where T : CreatureType, new()
     {

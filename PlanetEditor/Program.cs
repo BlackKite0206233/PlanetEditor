@@ -1,22 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 
-namespace PlanetEditorV2
+namespace PlanetEditor
 {
-    static class Program
+    class Program
     {
-        /// <summary>
-        /// 應用程式的主要進入點。
-        /// </summary>
-        [STAThread]
-        static void Main()
+        static void Main(string[] args)
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
             string input;
             input = Console.ReadLine();
             Planet p_planet = null;
@@ -25,7 +18,7 @@ namespace PlanetEditorV2
             {
                 string op;
                 op = input.Split(' ')[0];
-                if (op.Equals("cp", StringComparison.Ordinal))
+                if(op.Equals("cp", StringComparison.Ordinal))
                 {
                     string[] arg = input.Split(' ');
                     double r = Convert.ToDouble(arg[5]);
@@ -45,7 +38,7 @@ namespace PlanetEditorV2
                             p_planet = null;
                     }
                 }
-                else if (op.Equals("ac", StringComparison.Ordinal))
+                else if(op.Equals("ac", StringComparison.Ordinal))
                 {
                     string[] arg = input.Split(' ');
                     string planet = arg[1];
@@ -56,27 +49,27 @@ namespace PlanetEditorV2
                         Console.WriteLine("Please create planet first.");
                     else if (c_type.Equals("Lion"))
                         creature = new Creature<Lion>(name);
-                    else if (c_type.Equals("Plant"))
+                    else if(c_type.Equals("Plant"))
                         creature = new Creature<Plant>(name);
                     else
                         Console.WriteLine("you shall not pass!!");
-                    if (creature != null)
+                    if(creature != null)
                     {
                         bool flag = false;
-                        foreach (Planet p in pList)
+                        foreach(Planet p in pList)
                         {
-                            if (p.getName().Equals(planet))
+                            if(p.getName().Equals(planet))
                             {
                                 flag = true;
                                 p.addObject(creature);
                                 Console.WriteLine(p.getName() + " : " + creature.getName() + " added!");
                             }
-                        }
-                        if (!flag)
+                        } 
+                        if(!flag)
                             Console.WriteLine("can't find the planet!!");
                     }
                 }
-                else if (op.Equals("ro", StringComparison.Ordinal))
+                else if(op.Equals("ro", StringComparison.Ordinal))
                 {
                     string[] arg = input.Split(' ');
                     string planet = arg[1];
@@ -112,7 +105,7 @@ namespace PlanetEditorV2
                             Console.WriteLine("===============");
                             p.update();
                         }
-
+                           
                 }
                 else
                 {
