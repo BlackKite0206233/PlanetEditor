@@ -4,18 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PlanetEditor
+namespace PlanetEditorV2
 {
-    class Lion : CreatureType
+    class Plant : CreatureType
     {
-        public Lion() { }
+        public Plant() { }
         public override void move()
         {
-            Console.WriteLine("Run Run Run");
+            Console.WriteLine("Plant cannot move :(");
         }
         public override void absorb()
         {
-            Console.WriteLine("Eat Eat Eat");
+            Console.WriteLine("Growth");
         }
         public override bool alive()
         {
@@ -28,6 +28,7 @@ namespace PlanetEditor
         }
         public override int birth()
         {
+            Console.WriteLine("Spread seeds");
             return 0;
         }
     }

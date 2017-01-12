@@ -1,0 +1,8 @@
+D:\Users\Yeh\Documents\C#\PlanetEditorV2\PlanetEditorV2\bin\Debug\PlanetEditorV2.exe.config
+D:\Users\Yeh\Documents\C#\PlanetEditorV2\PlanetEditorV2\bin\Debug\PlanetEditorV2.exe
+D:\Users\Yeh\Documents\C#\PlanetEditorV2\PlanetEditorV2\bin\Debug\PlanetEditorV2.pdb
+D:\Users\Yeh\Documents\C#\PlanetEditorV2\PlanetEditorV2\obj\Debug\PlanetEditorV2.csprojResolveAssemblyReference.cache
+D:\Users\Yeh\Documents\C#\PlanetEditorV2\PlanetEditorV2\obj\Debug\PlanetEditorV2.Properties.Resources.resources
+D:\Users\Yeh\Documents\C#\PlanetEditorV2\PlanetEditorV2\obj\Debug\PlanetEditorV2.csproj.GenerateResource.Cache
+D:\Users\Yeh\Documents\C#\PlanetEditorV2\PlanetEditorV2\obj\Debug\PlanetEditorV2.exe
+D:\Users\Yeh\Documents\C#\PlanetEditorV2\PlanetEditorV2\obj\Debug\PlanetEditorV2.pdb

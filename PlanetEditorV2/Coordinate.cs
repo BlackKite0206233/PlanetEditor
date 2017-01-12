@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PlanetEditor
+namespace PlanetEditorV2
 {
     class Coordinate
     {
