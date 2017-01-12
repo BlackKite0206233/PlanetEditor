@@ -31,9 +31,17 @@ namespace PlanetEditor
         {
             _position = position;
         }
+        public Coordinate getPosition()
+        {
+            return _position;
+        }
         public void setRadius(double r)
         {
             _radius = r;
+        }
+        public double getRadius()
+        {
+            return _radius;
         }
         public void addObject(Object ptr)
         {

@@ -14,7 +14,7 @@ namespace PlanetEditor
             this.y = y;
             this.z = z;
         }
-
-        private double x, y, z;
+        
+        public double x, y, z;
     }
 }
