@@ -10,7 +10,7 @@ namespace PlanetEditor
     {
         static void Main(string[] args)
         {
-            String input;
+            string input;
             input = Console.ReadLine();
             Planet p_planet = null;
             List<Planet> pList = new List<Planet>();
