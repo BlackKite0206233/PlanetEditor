@@ -57,6 +57,15 @@ namespace PlanetEditor
                 }
                     
         }
+        public void renameObject(UInt32 id, string name)
+        {
+            foreach (Object it in _object_ptrs)
+                if (it.getID() == id)
+                {
+                    it.setName(name);
+                    break;
+                }
+        }
         public override void update()
         {
             if(_object_ptrs != null)
@@ -75,6 +84,9 @@ namespace PlanetEditor
         private double _radius;
         private List<Object> _object_ptrs = new List<Object>();
 
-        ~Planet() { }
+        ~Planet()
+        {
+            _object_ptrs.Clear();
+        }
     }
 }
