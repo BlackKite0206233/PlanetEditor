@@ -27,26 +27,11 @@ namespace PlanetEditor
                 throw new Exception("Radius should be greater than 0.0f.");   
         }
 
-        public void setPosition(Coordinate position)
-        {
-            _position = position;
-        }
-        public Coordinate getPosition()
-        {
-            return _position;
-        }
-        public void setRadius(double r)
-        {
-            _radius = r;
-        }
-        public double getRadius()
-        {
-            return _radius;
-        }
-        public void addObject(Object ptr)
-        {
-            _object_ptrs.Add(ptr);
-        }
+        public Coordinate getPosition() { return _position; }
+        public double getRadius() { return _radius; }
+        public void setPosition(Coordinate position) { _position = position; }
+        public void setRadius(double r) { _radius = r; }
+        public void addObject(Object ptr) { _object_ptrs.Add(ptr); }
         public void removeObject(UInt32 id)
         {
             foreach(Object it in _object_ptrs)

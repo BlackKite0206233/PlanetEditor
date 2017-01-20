@@ -19,8 +19,8 @@ namespace PlanetEditor
             _ID = s_next_id++;
         }
 
-        public uint getID() { return _ID; }
         public string getName() { return _name; }
+        public uint getID() { return _ID; }
         public void setName(string name) { _name = name; }
         public abstract void update();
 

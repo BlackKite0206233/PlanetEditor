@@ -18,14 +18,22 @@ namespace PlanetEditor
             {
                 string op;
                 op = input.Split(' ')[0];
-                if (op.Equals("cp", StringComparison.Ordinal)) { cp(); }
-                else if (op.Equals("ac", StringComparison.Ordinal)) { ac(); }
-                else if (op.Equals("ro", StringComparison.Ordinal)) { ro(); }
-                else if (op.Equals("rp", StringComparison.Ordinal)) { rp(); }
-                else if (op.Equals("up", StringComparison.Ordinal)) { up(); }
-                else if (op.Equals("chp", StringComparison.Ordinal)) { chp(); }
-                else if (op.Equals("cho", StringComparison.Ordinal)) { cho(); }
-                else { Console.WriteLine("Doesn't have this command"); }
+                if (op.Equals("cp", StringComparison.Ordinal)) 
+                    cp(); 
+                else if (op.Equals("ac", StringComparison.Ordinal)) 
+                    ac(); 
+                else if (op.Equals("ro", StringComparison.Ordinal)) 
+                    ro(); 
+                else if (op.Equals("rp", StringComparison.Ordinal)) 
+                    rp(); 
+                else if (op.Equals("up", StringComparison.Ordinal)) 
+                    up(); 
+                else if (op.Equals("chp", StringComparison.Ordinal)) 
+                    chp(); 
+                else if (op.Equals("cho", StringComparison.Ordinal)) 
+                    cho(); 
+                else 
+                    Console.WriteLine("Doesn't have this command"); 
                 input = Console.ReadLine();
             }
         }
@@ -46,7 +54,8 @@ namespace PlanetEditor
             {
                 Console.WriteLine(e.Data);
                 Console.WriteLine("you shall not pass!!");
-                if (p_planet != null) { p_planet = null; }
+                if (p_planet != null) 
+                    p_planet = null; 
             }
         }
         private static void ac()
@@ -56,10 +65,16 @@ namespace PlanetEditor
             string c_type = arg[2];
             string name = arg[3];
             Object creature = null;
-            if (pList == null) Console.WriteLine("Please create planet first.");
-            else if (c_type.Equals("Lion")) creature = new Creature<Lion>(name);
-            else if (c_type.Equals("Plant")) creature = new Creature<Plant>(name);
-            else Console.WriteLine("you shall not pass!!");
+
+            if (pList == null) 
+                Console.WriteLine("Please create planet first.");
+            else if (c_type.Equals("Lion")) 
+                creature = new Creature<Lion>(name);
+            else if (c_type.Equals("Plant")) 
+                creature = new Creature<Plant>(name);
+            else 
+                Console.WriteLine("you shall not pass!!");
+
             if (creature != null)
             {
                 bool flag = false;
@@ -70,7 +85,8 @@ namespace PlanetEditor
                         p.addObject(creature);
                         Console.WriteLine(p.getName() + " : " + creature.getName() + " added!");
                     }
-                if (!flag) { Console.WriteLine("can't find the planet!!"); } 
+                if (!flag)
+                    Console.WriteLine("can't find the planet!!");  
             }
         }
         private static void ro()
@@ -88,9 +104,11 @@ namespace PlanetEditor
                         p.removeObject(id);
                         Console.WriteLine("removed!");
                     }
-                if (!flag) { Console.WriteLine("can't find the planet!!"); }
+                if (!flag) 
+                    Console.WriteLine("can't find the planet!!"); 
             }   
-            else { Console.WriteLine("Please create planet first."); }
+            else 
+                Console.WriteLine("Please create planet first."); 
         }
         private static void rp()
         {
@@ -109,9 +127,11 @@ namespace PlanetEditor
                         break;
                     }
                 }
-                if (!flag) { Console.WriteLine("can't find the planet!!"); }
+                if (!flag) 
+                    Console.WriteLine("can't find the planet!!"); 
             }
-            else { Console.WriteLine("Please create planet first."); }
+            else 
+                Console.WriteLine("Please create planet first."); 
         }
         private static void up()
         {
@@ -124,7 +144,8 @@ namespace PlanetEditor
                     Console.WriteLine("===============");
                     p.update();
                 }
-            else { Console.WriteLine("Please create planet first."); }
+            else 
+                Console.WriteLine("Please create planet first."); 
         }
         private static void chp()
         {
@@ -141,9 +162,11 @@ namespace PlanetEditor
                         p.setName(newName);
                         Console.WriteLine("update!");
                     }
-                if (!flag) { Console.WriteLine("can't find the planet!!"); }
+                if (!flag) 
+                    Console.WriteLine("can't find the planet!!"); 
             }
-            else { Console.WriteLine("Please create planet first."); }   
+            else 
+                Console.WriteLine("Please create planet first.");   
         }
         private static void cho()
         {
@@ -161,9 +184,11 @@ namespace PlanetEditor
                         p.renameObject(id, newName);
                         Console.WriteLine("update!");
                     }
-                if (!flag) { Console.WriteLine("can't find the planet!!"); }
+                if (!flag) 
+                    Console.WriteLine("can't find the planet!!");
             }
-            else { Console.WriteLine("Please create planet first."); }
+            else 
+                Console.WriteLine("Please create planet first.");
         }
     }
 }
