@@ -31,7 +31,7 @@ namespace PlanetEditor
                 else if (op.Equals("chp", StringComparison.Ordinal)) 
                     changePlanetName(); 
                 else if (op.Equals("cho", StringComparison.Ordinal)) 
-                    changeo(); 
+                    changeCteatureName(); 
                 else 
                     Console.WriteLine("Doesn't have this command"); 
                 input = Console.ReadLine();
