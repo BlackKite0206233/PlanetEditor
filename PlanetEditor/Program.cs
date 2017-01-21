@@ -19,25 +19,25 @@ namespace PlanetEditor
                 string op;
                 op = input.Split(' ')[0];
                 if (op.Equals("cp", StringComparison.Ordinal)) 
-                    cp(); 
+                    createPlanet(); 
                 else if (op.Equals("ac", StringComparison.Ordinal)) 
-                    ac(); 
+                    addCreature(); 
                 else if (op.Equals("ro", StringComparison.Ordinal)) 
-                    ro(); 
+                    removeCteature(); 
                 else if (op.Equals("rp", StringComparison.Ordinal)) 
-                    rp(); 
+                    removePlanet(); 
                 else if (op.Equals("up", StringComparison.Ordinal)) 
-                    up(); 
+                    update(); 
                 else if (op.Equals("chp", StringComparison.Ordinal)) 
-                    chp(); 
+                    changePlanetName(); 
                 else if (op.Equals("cho", StringComparison.Ordinal)) 
-                    cho(); 
+                    changeo(); 
                 else 
                     Console.WriteLine("Doesn't have this command"); 
                 input = Console.ReadLine();
             }
         }
-        private static void cp()
+        private static void createPlanet()
         {
             Planet p_planet = null;
             string[] arg = input.Split(' ');
@@ -58,7 +58,7 @@ namespace PlanetEditor
                     p_planet = null; 
             }
         }
-        private static void ac()
+        private static void addCreature()
         {
             string[] arg = input.Split(' ');
             string planet = arg[1];
@@ -89,7 +89,7 @@ namespace PlanetEditor
                     Console.WriteLine("can't find the planet!!");  
             }
         }
-        private static void ro()
+        private static void removeCteature()
         {
             string[] arg = input.Split(' ');
             string planet = arg[1];
@@ -110,7 +110,7 @@ namespace PlanetEditor
             else 
                 Console.WriteLine("Please create planet first."); 
         }
-        private static void rp()
+        private static void removePlanet()
         {
             string[] arg = input.Split(' ');
             string planet = arg[1];
@@ -133,7 +133,7 @@ namespace PlanetEditor
             else 
                 Console.WriteLine("Please create planet first."); 
         }
-        private static void up()
+        private static void update()
         {
             if (pList != null)
                 foreach (Planet p in pList)
@@ -147,7 +147,7 @@ namespace PlanetEditor
             else 
                 Console.WriteLine("Please create planet first."); 
         }
-        private static void chp()
+        private static void changePlanetName()
         {
             string[] arg = input.Split(' ');
             string planet = arg[1];
@@ -168,7 +168,7 @@ namespace PlanetEditor
             else 
                 Console.WriteLine("Please create planet first.");   
         }
-        private static void cho()
+        private static void changeCteatureName()
         {
             string[] arg = input.Split(' ');
             string planet = arg[1];

@@ -1,17 +1,16 @@
 ﻿Q : 什麼是Class？
-A : 他像是一個範本，透過方法、屬性來規定Object生成後會長什麼樣子。Class有3個很重要的特性，封裝、繼承、多型。
+A : 他像是一個範本，透過方法、屬性來規定Object生成後會長什麼樣子。
 
 Q : 什麼是Constructor？
-A : 要將Class實體化成Object時會用到的function。
+A : 要將Class實體化成Object時會用到的function，他的名稱必須跟Class一樣。
 
 Q : 什麼是Destructor？
-A : 要將這個Object刪除時會用到的function，目的是記憶體回收。
+A : 要將物件釋放，使物件被註銷而無法繼續使用時會用到的function，他的名稱必須跟Class一樣，但是前面多一個~的符號。
 
 Q : 什麼是Interface？
 A : Interface有點像是Class，但是他不能實體化，他的目的是規範引用他的Class須要實做哪些function。
     舉個例子，"圓形"、"方形"、"三角形"都可以繼承"形狀"這個Class，我們可以把他們共同的特性寫在"形狀"這個Class裡，這樣繼承的時候"圓形"、"方形"、"三角形"都能夠擁有這些特性。
     可是如果有一個特性是只有"方形"跟"三角形"才有的，這個特性就不能寫在"形狀"這個Class裡面，而是使用Interface規範這些特性，讓"方形"跟"三角形"引用。
-    這樣就不用在"方形"跟"三角形"內寫同樣的程式碼，讓程式在維護上更加方便。
 
 Q : 什麼是Polymorphism？ 我在哪使用了Polymorphism？
 A : 1. 子類別可以繼承父類別的function，也可以透過override或virtual，針對不同的子類別改寫function。
