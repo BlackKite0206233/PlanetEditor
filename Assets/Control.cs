@@ -13,6 +13,7 @@ public class Control : Editor {
     bool       isSelect = false;
 
     const float   DIS_OFFSET = 5;
+    const float   SPEED      = 0.1f;
     const KeyCode PLUS       = KeyCode.KeypadPlus;
     const KeyCode MINUS      = KeyCode.KeypadMinus;
 
@@ -75,15 +76,9 @@ public class Control : Editor {
                 Vector3 changeVert;
                 
                 if (Event.current.keyCode == PLUS)
-                {
-                    float speed = 1 / hypotenuse * 0.1f;
-                    changeVert = Vector3.Lerp(v, highlighter.transform.position, speed);
-                }
+                    changeVert = Vector3.MoveTowards(v, highlighter.transform.position, SPEED);
                 else
-                {
-                    float speed = 1 / r * 0.1f;
-                    changeVert = Vector3.Lerp(v, t.referencePlanet.transform.position, speed);
-                }
+                    changeVert = Vector3.MoveTowards(v, t.referencePlanet.transform.position, SPEED);
                 vert.Add(changeVert);
             }
             else
