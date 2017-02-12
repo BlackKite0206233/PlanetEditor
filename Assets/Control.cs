@@ -53,7 +53,7 @@ public class Control : Editor {
         Mesh mesh     = t.referencePlanet.GetComponent<Mesh>();
         float dis     = Vector3.Distance(highlighter.transform.position, t.referencePlanet.transform.position);
         float radious = t.referencePlanet.Radious + DIS_OFFSET;
-        float angle   = Mathf.Atan(radious / dis) * 180 / Mathf.PI;
+        float angle   = Mathf.Asin(radious / dis) * 180 / Mathf.PI;
 
         light.spotAngle = angle * 2;
     }
